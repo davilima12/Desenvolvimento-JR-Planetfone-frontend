@@ -3,7 +3,7 @@
     <div class="nav">
         <nav class="navbar navbar-light">
             <a class="nav-link" href="donwload-youtube-/">Baixar Musica do youtube</a>
-            <a class="nav-link" href="/video">Baixar Videos do youtube</a>
+            <a class="nav-link" href="donwload-youtube-/video">Baixar Videos do youtube</a>
         </nav>
     </div>
 </template>

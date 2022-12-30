@@ -11,7 +11,7 @@ import VideoComponent from './pages/video/VideoComponent'
 
 const routes = [
   {path: '/donwload-youtube-', component: MusicaComponent},
-  {path: '/video', component: VideoComponent},
+  {path: 'donwload-youtube-/video', component: VideoComponent},
 ]
 
 const router = createRouter({
