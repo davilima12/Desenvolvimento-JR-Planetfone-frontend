@@ -179,7 +179,7 @@ export default {
         async fazerDownload() {
             try {
                 this.exibirSpnier = true
-                const response = await axios.get(`http://127.0.0.1:5000/musica?url=${this.url}`)
+                const response = await axios.get(`https://bakcendyouconvert.herokuapp.com/musica?url=${this.url}`)
                 this.exibirSpnier = false
                 this.exibirIframe = true
                 this.titulo = response.data._monostate.title
