@@ -39,7 +39,7 @@
                         <p> <strong> Para baixar o arquivo, clique nos 3 pontos <br> no canto
                             inferior
                             direito da tela<br> E escolha 'fazer download' na lista de opções.</strong></p>
-                        <iframe :src="linkDownload"></iframe>
+                        <iframe :src="linkDownload" :name="titulo"></iframe>
                     </div>
                 </div>
 
