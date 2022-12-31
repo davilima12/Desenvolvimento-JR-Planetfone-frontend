@@ -1,7 +1,13 @@
 <template>
     <div class="content">
         <div class="navbar border-bottom">
-            <NavBarComponent />
+            <h3 id="title" >YouConvert</h3>
+            <div class="nav">
+                <nav class="navbar navbar-light">
+                    <a class="nav-link" @click="musica" >Baixar Musica do youtube</a>
+                    <a class="nav-link" @click="video">Baixar Videos do youtube</a>
+                </nav>
+            </div>
         </div>
         <div class="loading" v-if="exibirSpnier">
             <div class="spinner">
@@ -10,11 +16,11 @@
         </div>
         <div class="row" id="header">
             <div class="col" style="margin: auto;">
-                <h2 class="mb-2 mt-3 text-center text-primary">Baixar Musicas do Youtube online</h2>
+                <h2 class="mb-2 mt-3 text-center text-primary">Baixar {{pagina}} do Youtube online</h2>
                 <form @submit.prevent="fazerDownload" style="margin: auto;">
                     <div class="row">
                         <div class="col-lg-6 col-12 mb-3" id="pesquisar">
-                            <input placeholder="Cole o link do Musica aqui" class="form-control" required
+                            <input placeholder="Cole o link da url aqui" class="form-control" required
                                 type="text" name="url" id="url" v-model="url">
                             <button class="btn btn-primary " id="download-button">download</button>
                         </div>
@@ -154,7 +160,6 @@
 </template>
 
 <script>
-import NavBarComponent from '../navbar/NavBarComponent.vue';
 const axios = require('axios');
 export default {
     data() {
@@ -164,13 +169,23 @@ export default {
             titulo: "",
             exibirIframe: false,
             anoAtual: '',
-            exibirSpnier: false
+            exibirSpnier: false,
+            pagina: 'Musica',
+            novaUrl: 'https://bakcendyouconvert.herokuapp.com/musica?url='
         }
     },
     mounted() {
         this.pegarAnoAtual()
     },
     methods: {
+        musica(){
+            this.novaUrl = 'https://bakcendyouconvert.herokuapp.com/musica?url='
+            this.pagina = 'Musica'
+        },
+        video(){
+            this.novaUrl = 'https://bakcendyouconvert.herokuapp.com?url='
+            this.pagina = 'Video'
+        },
         pegarAnoAtual() {
             const dataAtual = new Date();
             const anoAtual = dataAtual.getFullYear();
@@ -179,7 +194,7 @@ export default {
         async fazerDownload() {
             try {
                 this.exibirSpnier = true
-                const response = await axios.get(`https://bakcendyouconvert.herokuapp.com/musica?url=${this.url}`)
+                const response = await axios.get(`${this.novaUrl}${this.url}`)
                 this.exibirSpnier = false
                 this.exibirIframe = true
                 this.titulo = response.data._monostate.title
@@ -189,9 +204,6 @@ export default {
                 this.$swal("Erro", 'Não foi possivel encontrar essa musica', 'error')
             }
         },
-    },
-    components: {
-        NavBarComponent
     }
 }
 </script>

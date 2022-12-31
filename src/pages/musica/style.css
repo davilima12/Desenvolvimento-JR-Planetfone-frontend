@@ -19,7 +19,9 @@
 #pesquisar{
     margin: auto;
 }
-
+.nav-link{
+    cursor: pointer;
+}
 
 @media (min-width: 800px)
 {

@@ -2,8 +2,8 @@
 <h3 id="title" >YouConvert</h3>
     <div class="nav">
         <nav class="navbar navbar-light">
-            <a class="nav-link" href="/">Baixar Musica do youtube</a>
-            <a class="nav-link" href="/video">Baixar Videos do youtube</a>
+            <p class="nav-link" >Baixar Musica do youtube</p>
+            <p class="nav-link" >Baixar Videos do youtube</p>
         </nav>
     </div>
 </template>
