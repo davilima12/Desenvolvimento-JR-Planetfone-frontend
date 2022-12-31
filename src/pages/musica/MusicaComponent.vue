@@ -171,7 +171,7 @@ export default {
             anoAtual: '',
             exibirSpnier: false,
             pagina: 'Musica',
-            novaUrl: 'https://bakcendyouconvert.herokuapp.com/musica?url='
+            novaUrl: 'https://web-production-09c9.up.railway.app/musica?url='
         }
     },
     mounted() {
@@ -179,11 +179,11 @@ export default {
     },
     methods: {
         musica(){
-            this.novaUrl = 'https://bakcendyouconvert.herokuapp.com/musica?url='
+            this.novaUrl = 'https://web-production-09c9.up.railway.app/musica?url='
             this.pagina = 'Musica'
         },
         video(){
-            this.novaUrl = 'https://bakcendyouconvert.herokuapp.com?url='
+            this.novaUrl = 'https://web-production-09c9.up.railway.app?url='
             this.pagina = 'Video'
         },
         pegarAnoAtual() {
