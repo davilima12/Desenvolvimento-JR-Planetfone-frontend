@@ -1,12 +1,12 @@
 {
-  "name": "donwload-youtube-",
+  "name": "donwload-musica-video",
   "version": "0.1.0",
   "engines": {
     "node": "18.12.1"
   },
   "deploy": "node ./node_modules/vue-gh-pages/index.js",
   "wst": "/dist/",
-  "homepage": "https://github.com/davilima12/donwload-youtube-/",
+
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",

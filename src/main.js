@@ -10,8 +10,8 @@ import MusicaComponent from './pages/musica/MusicaComponent'
 import VideoComponent from './pages/video/VideoComponent'
 
 const routes = [
-  {path: '/donwload-youtube-/', component: MusicaComponent},
-  {path: '/donwload-youtube-/video', component: VideoComponent},
+  {path: '/', component: MusicaComponent},
+  {path: '/video', component: VideoComponent},
 ]
 
 const router = createRouter({

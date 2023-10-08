@@ -16,7 +16,7 @@
                         <div class="col-lg-6 col-12 mb-3" id="pesquisar">
                             <input placeholder="Cole o link do Video aqui" class="form-control" required
                                 type="text" name="url" id="url" v-model="url">
-                            <button class="btn btn-primary " id="download-button">download</button>
+                            <button class="btn btn-primary " id="download-button">Download</button>
                         </div>
 
                     </div>

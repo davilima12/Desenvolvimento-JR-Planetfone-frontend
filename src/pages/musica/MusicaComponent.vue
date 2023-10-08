@@ -1,12 +1,13 @@
 <template>
     <div class="content">
         <div class="navbar border-bottom">
-            <h3 id="title" >YouConvert</h3>
+            <h3 id="title">YouConverterer</h3>
             <div class="nav">
                 <nav class="navbar navbar-light">
-                    <a class="nav-link" @click="musica" >Baixar Musica do youtube</a>
-                    <a class="nav-link" @click="video">Baixar Videos do youtube</a>
+                    <a class="btn btn-primary m-2" @click="musica">Baixar Música do YouTube</a>
+                    <a class="btn btn-primary" @click="video">Baixar Vídeos do YouTube</a>
                 </nav>
+
             </div>
         </div>
         <div class="loading" v-if="exibirSpnier">
@@ -16,13 +17,13 @@
         </div>
         <div class="row" id="header">
             <div class="col" style="margin: auto;">
-                <h2 class="mb-2 mt-3 text-center text-primary">Baixar {{pagina}} do Youtube online</h2>
+                <h2 class="mb-2 mt-3 text-center text-primary">Baixar {{ pagina }} do Youtube online</h2>
                 <form @submit.prevent="fazerDownload" style="margin: auto;">
                     <div class="row">
                         <div class="col-lg-6 col-12 mb-3" id="pesquisar">
-                            <input placeholder="Cole o link da url aqui" class="form-control" required
-                                type="text" name="url" id="url" v-model="url">
-                            <button class="btn btn-primary " id="download-button">download</button>
+                            <input placeholder="Cole o link da url aqui" class="form-control" required type="text"
+                                name="url" id="url" v-model="url">
+                            <button class="btn btn-primary " id="download-button">Download</button>
                         </div>
 
                     </div>
@@ -37,8 +38,8 @@
                     <h3 class="text-center text-primary mt-3">{{ titulo }}</h3>
                     <div class="col mt-2 text-center">
                         <p> <strong> Para baixar o arquivo, clique nos 3 pontos <br> no canto
-                            inferior
-                            direito da tela<br> E escolha 'fazer download' na lista de opções.</strong></p>
+                                inferior
+                                direito da tela<br> E escolha 'fazer download' na lista de opções.</strong></p>
                         <iframe :src="linkDownload" :name="titulo"></iframe>
                     </div>
                 </div>
@@ -58,10 +59,10 @@
                         <div class="sf_container">
                             <div class="wrapper">
                                 <div class="mt-2">
-                                    <h3 class="title center text-primary">YouConvert</h3>
+                                    <h3 class="title center text-primary">YouConverter</h3>
                                     <div class="border-bottom">
                                         <div class="faq_item_title">
-                                            <h4 itemprop="name">O que é YouConvert?</h4>
+                                            <h4 itemprop="name">O que é YouConverter?</h4>
                                         </div>
                                         <div>
                                             <div>
@@ -76,7 +77,7 @@
                                     </div>
                                     <div class="border-bottom mt-2">
                                         <div class="text-primary">
-                                            <h4>Como baixar o vídeo do YouTube no YouConvert mais
+                                            <h4>Como baixar o vídeo do YouTube no YouConverter mais
                                                 rápido?</h4>
                                         </div>
                                         <div class="mb-2">
@@ -87,7 +88,7 @@
                                                     </li>
                                                     <li>Etapa 3: aguarde alguns segundos pela ferramenta de
                                                         processamento de vídeo e pressione o botão "Download"</li>
-                                                    <li>Também pode usar o utilitário "downloader youtube" do YouConvert
+                                                    <li>Também pode usar o utilitário "downloader youtube" do YouConverter
                                                         para baixar o vídeo mais rápido</li>
                                                 </ul>
                                             </div>
@@ -95,7 +96,7 @@
                                     </div>
                                     <div class="border-bottom mt-2">
                                         <div class="text-primary">
-                                            <h4>O YouConvert tem um número limitado de usos?</h4>
+                                            <h4>O YouConverter tem um número limitado de usos?</h4>
                                         </div>
                                         <div class="mb-2">
                                             <div> Nossa ferramenta permite que você baixe vídeos ilimitados do Youtube
@@ -104,7 +105,7 @@
                                     </div>
                                     <div class="border-bottom mt-2">
                                         <div class="text-primary">
-                                            <h4>Para quais formatos o YouConvert permite a conversão de
+                                            <h4>Para quais formatos o YouConverter permite a conversão de
                                                 vídeos do Youtube?</h4>
                                         </div>
                                         <div class="mb-2">
@@ -116,7 +117,7 @@
                                     </div>
                                     <div class="border-bottom mt-2">
                                         <div class="text-primary">
-                                            <h4>O YouConvert pode converter vídeos do Youtube em
+                                            <h4>O YouConverter pode converter vídeos do Youtube em
                                                 mp3?</h4>
                                         </div>
                                         <div class="mb-2">
@@ -126,12 +127,12 @@
                                     </div>
                                     <div class="border-bottom mt-2">
                                         <div class="text-primary">
-                                            <h4>A ferramenta YouConvert pode baixar vídeos do Youtube em
+                                            <h4>A ferramenta YouConverter pode baixar vídeos do Youtube em
                                                 telefones celulares?</h4>
                                         </div>
                                         <div class="mb-2">
                                             <div> A tecnologia de download de vídeo do Youtube da
-                                                YouConvert funciona bem em todos os dispositivos, como PCs,
+                                                YouConverter funciona bem em todos os dispositivos, como PCs,
                                                 smartphones e tablets. O método funciona de forma semelhante a , y2meta,
                                                 x2convert sem a necessidade de
                                                 instalar qualquer outro software. </div>
@@ -155,8 +156,6 @@
 
         </div>
     </div>
-
-
 </template>
 
 <script>
@@ -171,19 +170,19 @@ export default {
             anoAtual: '',
             exibirSpnier: false,
             pagina: 'Musica',
-            novaUrl: 'https://web-production-09c9.up.railway.app/musica?url='
+            novaUrl: 'http://127.0.0.1:5000/musica?url='
         }
     },
     mounted() {
         this.pegarAnoAtual()
     },
     methods: {
-        musica(){
-            this.novaUrl = 'https://web-production-09c9.up.railway.app/musica?url='
+        musica() {
+            this.novaUrl = 'http://127.0.0.1:5000/musica?url='
             this.pagina = 'Musica'
         },
-        video(){
-            this.novaUrl = 'https://web-production-09c9.up.railway.app?url='
+        video() {
+            this.novaUrl = 'http://127.0.0.1:5000?url='
             this.pagina = 'Video'
         },
         pegarAnoAtual() {
