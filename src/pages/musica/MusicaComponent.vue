@@ -1,7 +1,7 @@
 <template>
     <div class="content">
         <div class="navbar border-bottom">
-            <h3 id="title">YouConverterer</h3>
+            <h3 id="title">YouConverter</h3>
             <div class="nav">
                 <nav class="navbar navbar-light">
                     <a class="btn btn-primary m-2" @click="musica">Baixar Música do YouTube</a>
