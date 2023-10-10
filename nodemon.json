@@ -1,0 +1,8 @@
+{
+    "watch": [
+        "src",
+        "public"
+    ],
+    "ext": "js, vue",
+    "exec": "vue-cli-service serve"
+}
